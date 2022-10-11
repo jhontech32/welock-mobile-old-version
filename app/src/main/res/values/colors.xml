@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#1B023B</color>
+    <color name="secondary">#FF03DAC5</color>
+    <color name="night_mode">#6124B1</color>
+    <color name="notifications">#216685</color>
+    <color name="pin_widget">#30B536</color>
+    <color name="security">#D95F69</color>
+    <color name="set_navigation">#925825</color>
+    <color name="screen_code">#fc3631</color>
+    <color name="reset_code">#d1a438</color>
+    <color name="info_developer">#1d2424</color>
+
+</resources>

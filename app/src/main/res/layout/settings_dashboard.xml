@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backNavBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="14dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Pengaturan"
+            android:textColor="#FFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/profile_pic2" />
+
+            <TextView
+                android:id="@+id/adminName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/adminInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uknown | 404 Not found."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_gravity="center"/>
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:paddingStart="30dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:paddingEnd="30dp"-->
+<!--                android:background="@drawable/round_back_secondary_100"-->
+<!--                android:text="Edit profile"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/primary" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:background="@drawable/round_back_white10_20">
+
+                    <!-- Dark Mode / Ligt Mode -->
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/nightModeIcon"-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:padding="12dp"-->
+<!--                            android:src="@drawable/night_mode_icon"-->
+<!--                            android:background="@drawable/round_back_night_mode" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:text="Night Mode"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:layout_toEndOf="@+id/nightModeIcon"-->
+<!--                            android:layout_marginStart="20dp" />-->
+<!--                        -->
+<!--                        <androidx.appcompat.widget.SwitchCompat-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:switchMinWidth="50dp"-->
+<!--                            android:theme="@style/nightModeSwitch" />-->
+
+<!--                    </RelativeLayout>-->
+
+                    <!-- Full Access -->
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/notificationIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"
+                            android:src="@drawable/admin_panel_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/notificationIcon"
+                            android:text="Administrator"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/enableBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#198c19"
+                            android:text="READY"
+                            android:drawableLeft="@drawable/checklist_icon" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/disableBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#cc0000"
+                            android:drawableLeft="@drawable/ic_baseline_power_settings_new_24"
+                            android:text="NOT YET" />
+
+<!--                        <androidx.appcompat.widget.SwitchCompat-->
+<!--                            android:id="@+id/enableBtn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:switchMinWidth="50dp"-->
+<!--                            android:theme="@style/notificationSwitch" />-->
+
+                    </RelativeLayout>
+
+                    <!-- Pin Widget -->
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/privateAccountIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"
+                            android:src="@drawable/pin_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_toEndOf="@+id/privateAccountIcon"
+                            android:text="Smart Lock"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_widget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#198c19"
+                            android:drawableLeft="@drawable/touch_icon"
+                            android:text="TAP" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/permissionWidgetBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#cc0000"
+                            android:drawableLeft="@drawable/permission_icon"
+                            android:text="BLOCK" />
+
+<!--                        <androidx.appcompat.widget.SwitchCompat-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:switchMinWidth="50dp"-->
+<!--                            android:theme="@style/privateAccountSwitch" />-->
+
+                    </RelativeLayout>
+
+                    <!-- System BottomBar -->
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/privateAccountIcon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_back_notification"
+                            android:padding="12dp"
+                            android:src="@drawable/task_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Open Navigation"
+                            android:textColor="@color/white"
+                            android:layout_toEndOf="@+id/privateAccountIcon"
+                            android:layout_marginStart="20dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/stopTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#198c19"
+                            android:text="TAP"
+                            android:drawableLeft="@drawable/touch_icon" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/permissionTaskBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="#cc0000"
+                            android:drawableLeft="@drawable/permission_icon"
+                            android:text="BLOCK" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/round_back_white10_20">
+
+                <!-- Screen Lock -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/developerIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_screen_code"
+                        android:padding="12dp"
+                        android:src="@drawable/locked_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/developerIcon"
+                        android:text="Screen Code"
+                        android:textColor="@color/white" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showScreenCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="#198c19"
+                        android:drawableLeft="@drawable/gear_icon"
+                        android:text="SET" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/permissionScreenBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="#cc0000"
+                        android:drawableLeft="@drawable/permission_icon"
+                        android:text="BLOCK" />
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:src="@drawable/right_arrow_icon"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_centerVertical="true"/>-->
+
+                </RelativeLayout>
+
+                <!-- Factory Reset -->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/versionIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_screen_code"
+                        android:padding="12dp"
+                        android:src="@drawable/reset_factory_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Factory Code"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@+id/versionIcon"
+                        android:layout_marginStart="20dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showResetCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="#198c19"
+                        android:text="SET"
+                        android:drawableLeft="@drawable/gear_icon" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/permissionResetBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="#cc0000"
+                        android:drawableLeft="@drawable/permission_icon"
+                        android:text="BLOCK" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/round_back_white10_20">
+
+                <!-- Developer -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/developerIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_back_info"
+                        android:padding="12dp"
+                        android:src="@drawable/developer_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/developerIcon"
+                        android:text="White Programmer"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <!-- Version -->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/versionIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="12dp"
+                        android:src="@drawable/version_icon"
+                        android:background="@drawable/round_back_info" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Version 1.0.0 - beta"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@+id/versionIcon"
+                        android:layout_marginStart="20dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/dashboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="20dp">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/image_view_person"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="320dp"-->
+            <!--                android:background="@android:color/darker_gray"-->
+            <!--                android:src="@drawable/ic_baseline_person_24" />-->
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/tilCodeFactory"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:hint="@string/destroy"-->
+<!--                app:startIconDrawable="@drawable/ic_baseline_perm_device_information_24">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/etCodeFactory"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="text" />-->
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/enableBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#198c19"
+                android:drawableLeft="@drawable/admin_panel_icon"
+                android:hint="@string/destroy"
+                android:text="Aktifkan administrator"
+                android:textSize="10sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_widget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/pin_icon"
+                android:background="@color/black"
+                android:text="Pin Widget"
+                android:textSize="10sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/disableBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#cc0000"
+                android:drawableLeft="@drawable/ic_baseline_power_settings_new_24"
+                android:text="Matikan administrator"
+                android:textSize="10sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stopTaskBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#5c7e96"
+                android:drawableLeft="@drawable/task_icon"
+                android:text="Stop TasK"
+                android:textSize="10sp" />
+
+<!--            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:columnCount="2">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/boton1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Imagen"-->
+<!--                    app:layout_flex-->
+<!--                    />-->
+<!--                <Button-->
+<!--                    android:id="@+id/boton2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Play"-->
+<!--                    />-->
+<!--            </GridLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCodeKey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/lock"
+                app:startIconDrawable="@drawable/lock">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCodeKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="4"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFactoryCode"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/destroy"
+                app:startIconDrawable="@drawable/ic_baseline_perm_device_information_24">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFactoryCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="4"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#7e469f"
+                android:drawableLeft="@drawable/ic_baseline_save_24"
+                android:text="SIMPAN PENGATURAN"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

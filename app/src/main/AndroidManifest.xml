@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.iloku">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:launchMode="singleTask"
+        android:theme="@style/Theme.Iloku">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:stateNotNeeded="true"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name=".DeviceOwnerReceiver"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/policies"/>
+            <intent-filter>
+                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".MyAdmin"
+            android:exported="false"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/policies" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <!-- BROADCAST SERVICES -->
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <!---->
+
+        <!-- BACKGROUND SERVICES -->
+        <service android:name=".MyBackgroundService"></service>
+        <!---->
+        <!-- FOREGROUND SERVICES -->
+        <service android:name=".MyForegroundService"></service>
+        <!---->
+        <!-- FLOATING BUBBLE SERVICES -->
+        <service
+            android:name=".WidgetService"
+            android:enabled="true" />
+        <!---->
+    </application>
+
+</manifest>
